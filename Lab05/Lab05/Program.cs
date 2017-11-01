@@ -4,18 +4,20 @@ class Program
 {
     static void Main()
     {
-        double myDouble = 9.9d;
-        Console.WriteLine(myDouble);
+        long myLong = long.MaxValue;
+        int myInt = (int)myLong;   // Explicit conversion
 
-        long myLong = (long)myDouble;
+        float heightInMeters = 1.74f; // Explicit conversion
+        double maxHeight = heightInMeters; // Implicit
+        double minHeight = (double)heightInMeters; // Explicit
+        float actualHeight = (float)maxHeight; // Explicit
+
         Console.WriteLine(myLong);
-
-        myDouble = 9e9d;
-        Console.WriteLine(myDouble);
-
-        int myInt = (int)myDouble;
         Console.WriteLine(myInt);
-        Console.WriteLine(int.MinValue);
+        Console.WriteLine(heightInMeters);
+        Console.WriteLine(maxHeight);
+        Console.WriteLine(minHeight);
+        Console.WriteLine(actualHeight);
 
     }
 }
