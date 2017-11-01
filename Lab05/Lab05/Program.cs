@@ -4,17 +4,8 @@ class Program
 {
     static void Main()
     {
-        int x = 6;
-        int y = 4;
-
-        Console.WriteLine(y *= 2);
-        int z = y = 3;
-
-        Console.WriteLine(z);
-        Console.WriteLine(x |= 1);
-        Console.WriteLine(x += 3);
-        Console.WriteLine(x /= 2);
-
+        double GPA = 1.95;
+        Console.WriteLine("You are " + (GPA >= 2.0 ? "pass" : "fall"));
 
     }
 }
