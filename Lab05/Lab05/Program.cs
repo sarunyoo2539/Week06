@@ -4,11 +4,18 @@ class Program
 {
     static void Main()
     {
-        int myInt = 5;
-        Console.WriteLine(myInt);
-        long myLong = myInt;
+        double myDouble = 9.9d;
+        Console.WriteLine(myDouble);
+
+        long myLong = (long)myDouble;
         Console.WriteLine(myLong);
-        Console.WriteLine(myLong + myInt);
+
+        myDouble = 9e9d;
+        Console.WriteLine(myDouble);
+
+        int myInt = (int)myDouble;
+        Console.WriteLine(myInt);
+        Console.WriteLine(int.MinValue);
 
     }
 }
