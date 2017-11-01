@@ -4,18 +4,15 @@ class Program
 {
     static void Main()
     {
-        int a = 1;
-        int b = 2;
-        int c;
-        c = add(a, b);
-        Console.WriteLine("c = {0}", c);
-        Console.WriteLine("3 + 5 = {0}", add(3, 5));
-        Console.WriteLine("4 + 7 =  " + add(4, 7));
+        long c = Factorial(5);
+        Console.WriteLine("Factorial of 5 = {0}", c);
         Console.ReadLine();
     }
 
-    static int add(int a, int b)
+    static long Factorial(int n)
     {
-        return a + b;
+        if (n == 0)  // Factorial 0 = 1
+            return 1;
+        return n * Factorial(n - 1);
     }
 }
