@@ -4,21 +4,17 @@ class Program
 {
     static void Main()
     {
-        int x = 17;
-        double y = x / 4.0;
-        double z = y * y;
-        Console.WriteLine(y);
-        Console.WriteLine(z);
+        int x = 6;
+        int y = 4;
 
-        int a = 5;
-        int b = 4;
-        Console.WriteLine(a + b);
-        Console.WriteLine(a + (b++));
-        Console.WriteLine(a + b);
-        Console.WriteLine(a + (++b));
-        Console.WriteLine(a + b);
-        Console.WriteLine(14 / a);
-        Console.WriteLine(14 % a);
+        Console.WriteLine(y *= 2);
+        int z = y = 3;
+
+        Console.WriteLine(z);
+        Console.WriteLine(x |= 1);
+        Console.WriteLine(x += 3);
+        Console.WriteLine(x /= 2);
+
 
     }
 }
