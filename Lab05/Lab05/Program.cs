@@ -8,16 +8,10 @@ namespace Lab05
         {
             try
             {
-                Console.Write("Please enter weight1 : ");
+                Console.Write("Please enter weight : ");
                 double w1 = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Please enter weight2 : ");
-                double w2 = Convert.ToDouble(Console.ReadLine());
-
-                Console.Write("Please enter high : ");
-                double h = Convert.ToDouble(Console.ReadLine());
-
-                Area(w1, w2, h);
+                weight(w1);
             }
             catch (FormatException e)
             {
@@ -29,10 +23,10 @@ namespace Lab05
             }
 
         }
-        static void Area(double w1, double w2, double h)
+        static void weight(double w1)
         {
-            double a = ((w1 + w2) * h) * 1 / 2;
-            Console.WriteLine("result = {0} cm^2", a);
+            double a = (w1 * 1.6);
+            Console.WriteLine("Weight = {0} N", a);
         }
     }
 }
