@@ -6,29 +6,15 @@ namespace Lab05
     {
         static void Main(string[] args)
         {
-            try
-            {
-                Console.Write("Please enter First Number : ");
-                int val1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Please enter Final Number : ");
-                int val2 = Convert.ToInt32(Console.ReadLine());
-                Mod7(val1, val2);
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            catch (OverflowException e)
-            {
-                Console.WriteLine(e.Message);
-            }       
+            Compare();
+            Console.ReadKey();           
         }
-        static void Mod7(int val1 ,int val2)
+        static void Compare()
         {
-            for (int i = val1; i<= val2; i++)
+            byte dec = 16;
+            for (int i = 1; i <= 100; i++)
             {
-                if (i % 7 == 0)
+                if ((i & dec) == dec)
                 {
                     Console.Write(i + " ");
                 }
