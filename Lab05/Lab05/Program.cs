@@ -1,36 +1,39 @@
 ﻿using System;
 
-class Program
+namespace Lab05
 {
-    static void Main(String[] args)
+    class Program
     {
-        try
+        static void Main(string[] args)
         {
-            Console.Write("Please enter value : ");
-            int val1 = Convert.ToInt32(Console.ReadLine());
-            EventCheck(val1);
+            try
+            {
+                Console.Write("Please enter First Number : ");
+                int val1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Please enter Final Number : ");
+                int val2 = Convert.ToInt32(Console.ReadLine());
+                Mod7(val1, val2);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+            }       
         }
-        catch (FormatException e)
+        static void Mod7(int val1 ,int val2)
         {
-            Console.WriteLine(e.Message);
-        }
-        catch (OverflowException e)
-        {
-            Console.WriteLine(e.Message);
+            for (int i = val1; i<= val2; i++)
+            {
+                if (i % 7 == 0)
+                {
+                    Console.Write(i + " ");
+                }
+            }
         }
     }
-    static int EventCheck(int val1)
-    {
-        if (val1 % 2 == 0)
-        {
-            Console.WriteLine("{0} is Event Number", val1);
-        }
-        else
-        {
-            Console.WriteLine("{0} is Odd Number", val1);
-        }
-        return 0;
-    }
-    
 }
 
